@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live — María Castro</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .page-header {
+            padding: 8rem 4rem 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+            .page-header h1 {
+                font-size: clamp(2rem, 5vw, 4rem);
+                font-weight: 400;
+                letter-spacing: -0.02em;
+                margin-bottom: 1rem;
+            }
+
+            .page-header p {
+                color: var(--text-light);
+                max-width: 600px;
+            }
+
+        .content {
+            padding: 4rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .performance-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .performance-card {
+            border: 1px solid var(--border);
+            padding: 2rem;
+        }
+
+            .performance-card h3 {
+                font-size: 1.2rem;
+                font-weight: 500;
+                margin-bottom: 1rem;
+            }
+
+        .performance-date {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #f5f5f5;
+            margin-bottom: 1.5rem;
+        }
+
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+
+        .performance-venue {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        @media (max-width: 1024px) {
+            .performance-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="index.html" class="logo">María Castro</a>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="#">Projects</a>
+                <ul class="dropdown-menu">
+                    <li><a href="projects/liminal-gesture/">Liminal Gesture</a></li>
+                    <li><a href="projects/sinfonia-biotica/">Sinfonía Biótica</a></li>
+                    <li><a href="projects/pink-noise/">Pink Noise</a></li>
+                    <li><a href="projects/mareo-migrante/">Mareo Migrante MM</a></li>
+                    <li><a href="projects/algorithm-fest/">{PinkNoise.ar} Algorithm Music Fest</a></li>
+                </ul>
+            </li>
+            <li><a href="lutherie.html">Experimental / Post-digital Lutherie</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="live.html">Live</a></li>
+            <li><a href="https://marcastronoise.weebly.com/" target="_blank">Game Audio</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>Live</h1>
+        <p>Documented performances, live sets, and concert recordings.</p>
+    </header>
+
+    <div class="content">
+        <div class="performance-grid">
+            <div class="performance-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" title="Live performance" allowfullscreen></iframe>
+                </div>
+                <span class="performance-date">2024 — Ars Electronica Forum Wallis</span>
+                <h3>Live Coding Set</h3>
+                <p class="performance-venue">Real-time algorithmic composition with SuperCollider and modular synthesizer.</p>
+            </div>
+
+            <div class="performance-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" title="Live performance" allowfullscreen></iframe>
+                </div>
+                <span class="performance-date">2024 — Q-O2</span>
+                <h3>Electroacoustic Improvisation</h3>
+                <p class="performance-venue">Solo performance using custom instruments and live processing.</p>
+            </div>
+
+            <div class="performance-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" title="Live performance" allowfullscreen></iframe>
+                </div>
+                <span class="performance-date">2023 — Festival Paralelo</span>
+                <h3>Modular Synth Performance</h3>
+                <p class="performance-venue">Analog and digital synthesis in quadraphonic spatialization.</p>
+            </div>
+
+            <div class="performance-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" title="Live performance" allowfullscreen></iframe>
+                </div>
+                <span class="performance-date">2023 — BAH Festival</span>
+                <h3>Interactive Installation Performance</h3>
+                <p class="performance-venue">Audience-responsive system with motion tracking and generative audio.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-left">© 2024 María Castro</div>
+        <div class="footer-right">
+            <a href="mailto:contact@mariacastro.audio">Email</a>
+            <a href="https://sinfoniabiotica.xyz" target="_blank">Sinfonía Biótica</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

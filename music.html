@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music — María Castro</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .page-header {
+            padding: 8rem 4rem 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+            .page-header h1 {
+                font-size: clamp(2rem, 5vw, 4rem);
+                font-weight: 400;
+                letter-spacing: -0.02em;
+                margin-bottom: 1rem;
+            }
+
+            .page-header p {
+                color: var(--text-light);
+                max-width: 600px;
+            }
+
+        .content {
+            padding: 4rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .playlist {
+            margin-bottom: 3rem;
+            border: 1px solid var(--border);
+            padding: 2rem;
+        }
+
+            .playlist h3 {
+                font-size: 1.2rem;
+                font-weight: 500;
+                margin-bottom: 1.5rem;
+            }
+
+        .soundcloud-embed {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="index.html" class="logo">María Castro</a>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="#">Projects</a>
+                <ul class="dropdown-menu">
+                    <li><a href="projects/liminal-gesture/">Liminal Gesture</a></li>
+                    <li><a href="projects/sinfonia-biotica/">Sinfonía Biótica</a></li>
+                    <li><a href="projects/pink-noise/">Pink Noise</a></li>
+                    <li><a href="projects/mareo-migrante/">Mareo Migrante MM</a></li>
+                    <li><a href="projects/algorithm-fest/">{PinkNoise.ar} Algorithm Music Fest</a></li>
+                </ul>
+            </li>
+            <li><a href="lutherie.html">Experimental / Post-digital Lutherie</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="live.html">Live</a></li>
+            <li><a href="https://marcastronoise.weebly.com/" target="_blank">Game Audio</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>Music</h1>
+        <p>Selected compositions, soundscapes, and electroacoustic works.</p>
+    </header>
+
+    <div class="content">
+        <div class="playlist">
+            <h3>Electroacoustic Works</h3>
+            <iframe class="soundcloud-embed" src="https://w.soundcloud.com/player/?url=URL_DE_TU_PLAYLIST&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+        </div>
+
+        <div class="playlist">
+            <h3>Soundscapes & Field Recordings</h3>
+            <iframe class="soundcloud-embed" src="https://w.soundcloud.com/player/?url=URL_DE_TU_PLAYLIST&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+        </div>
+
+        <div class="playlist">
+            <h3>Game Audio & Interactive Sound</h3>
+            <iframe class="soundcloud-embed" src="https://w.soundcloud.com/player/?url=URL_DE_TU_PLAYLIST&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-left">© 2024 María Castro</div>
+        <div class="footer-right">
+            <a href="mailto:contact@mariacastro.audio">Email</a>
+            <a href="https://sinfoniabiotica.xyz" target="_blank">Sinfonía Biótica</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
