@@ -6,13 +6,13 @@
     <title>María Castro — Sound Artist</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         :root {
             --bg: #ffffff;
             --text: #111111;
@@ -20,7 +20,7 @@
             --accent: #ff0000;
             --border: #e0e0e0;
         }
-        
+
         body {
             background: var(--bg);
             color: var(--text);
@@ -29,7 +29,7 @@
             font-size: 15px;
             -webkit-font-smoothing: antialiased;
         }
-        
+
         nav {
             position: fixed;
             top: 0;
@@ -44,46 +44,46 @@
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border);
         }
-        
+
         .logo {
             font-size: 1.1rem;
             font-weight: 500;
             letter-spacing: -0.02em;
         }
-        
+
         .nav-links {
             display: flex;
             gap: 3rem;
             list-style: none;
         }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-light);
-            font-size: 0.9rem;
-            transition: color 0.3s;
-            position: relative;
-        }
-        
-        .nav-links a:hover {
-            color: var(--text);
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--accent);
-            transition: width 0.3s;
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
+
+            .nav-links a {
+                text-decoration: none;
+                color: var(--text-light);
+                font-size: 0.9rem;
+                transition: color 0.3s;
+                position: relative;
+            }
+
+                .nav-links a:hover {
+                    color: var(--text);
+                }
+
+                .nav-links a::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                    width: 0;
+                    height: 1px;
+                    background: var(--accent);
+                    transition: width 0.3s;
+                }
+
+                .nav-links a:hover::after {
+                    width: 100%;
+                }
+
         .hero {
             min-height: 100vh;
             display: grid;
@@ -92,11 +92,11 @@
             padding: 8rem 4rem 4rem;
             align-items: center;
         }
-        
+
         .hero-content {
             padding-right: 4rem;
         }
-        
+
         .hero-label {
             font-size: 0.75rem;
             text-transform: uppercase;
@@ -105,7 +105,7 @@
             margin-bottom: 2rem;
             display: block;
         }
-        
+
         h1 {
             font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 400;
@@ -113,7 +113,7 @@
             letter-spacing: -0.04em;
             margin-bottom: 2rem;
         }
-        
+
         .hero-description {
             font-size: 1.1rem;
             color: var(--text-light);
@@ -121,45 +121,45 @@
             line-height: 1.6;
             margin-bottom: 3rem;
         }
-        
+
         .hero-meta {
             display: flex;
             gap: 3rem;
             font-size: 0.85rem;
             color: var(--text-light);
         }
-        
-        .hero-meta div {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-        
-        .hero-meta strong {
-            color: var(--text);
-            font-weight: 500;
-        }
-        
+
+            .hero-meta div {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .hero-meta strong {
+                color: var(--text);
+                font-weight: 500;
+            }
+
         .hero-image {
             height: 80vh;
             background: #f5f5f5;
             position: relative;
             overflow: hidden;
         }
-        
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            filter: grayscale(100%);
-            transition: filter 0.6s ease;
-        }
-        
-        .hero-image:hover img {
-            filter: grayscale(0%);
-        }
-        
+
+            .hero-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                filter: grayscale(100%);
+                transition: filter 0.6s ease;
+            }
+
+            .hero-image:hover img {
+                filter: grayscale(0%);
+            }
+
         .image-caption {
             position: absolute;
             bottom: 2rem;
@@ -169,163 +169,182 @@
             background: rgba(0,0,0,0.7);
             padding: 0.5rem 1rem;
         }
-        
+
         section {
             padding: 6rem 4rem;
             border-top: 1px solid var(--border);
         }
-        
+
         .section-header {
             display: grid;
             grid-template-columns: 200px 1fr;
             gap: 4rem;
             margin-bottom: 4rem;
         }
-        
+
         .section-number {
             font-size: 0.75rem;
             color: var(--text-light);
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
-        
+
         h2 {
             font-size: 2rem;
             font-weight: 400;
             letter-spacing: -0.02em;
         }
-        
+
         .bio-grid {
             display: grid;
             grid-template-columns: 200px 1fr 1fr;
             gap: 4rem;
         }
-        
+
         .bio-text {
             font-size: 1.05rem;
             line-height: 1.7;
             color: var(--text-light);
         }
-        
-        .bio-text p {
-            margin-bottom: 1.5rem;
-        }
-        
+
+            .bio-text p {
+                margin-bottom: 1.5rem;
+            }
+
         .bio-image {
             aspect-ratio: 4/5;
             background: #f5f5f5;
             overflow: hidden;
         }
-        
-        .bio-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            filter: grayscale(100%);
-            transition: filter 0.6s ease;
-        }
-        
-        .bio-image:hover img {
-            filter: grayscale(0%);
-        }
-        
+
+            .bio-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                filter: grayscale(100%);
+                transition: filter 0.6s ease;
+            }
+
+            .bio-image:hover img {
+                filter: grayscale(0%);
+            }
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 4rem;
         }
-        
+
         .project-card {
             position: relative;
         }
-        
+
         .project-image {
             aspect-ratio: 16/10;
             background: #f5f5f5;
             margin-bottom: 1.5rem;
             overflow: hidden;
         }
-        
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            filter: grayscale(100%);
-            transition: all 0.6s ease;
-        }
-        
+
+            .project-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                filter: grayscale(100%);
+                transition: all 0.6s ease;
+            }
+
         .project-card:hover .project-image img {
             filter: grayscale(0%);
             transform: scale(1.02);
         }
-        
+
         .project-title {
             font-size: 1.1rem;
             font-weight: 500;
             margin-bottom: 0.5rem;
             letter-spacing: -0.01em;
         }
-        
+
         .project-meta {
             font-size: 0.85rem;
             color: var(--text-light);
         }
-        
+
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-top: 4rem;
         }
-        
+
         .gallery-item {
             aspect-ratio: 1;
             background: #f5f5f5;
             overflow: hidden;
         }
-        
-        .gallery-item img {
+
+            .gallery-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                filter: grayscale(100%);
+                transition: filter 0.6s ease;
+            }
+
+            .gallery-item:hover img {
+                filter: grayscale(0%);
+            }
+
+        /* Video section */
+        .video-container {
+            position: relative;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            filter: grayscale(100%);
-            transition: filter 0.6s ease;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            background: #f5f5f5;
         }
-        
-        .gallery-item:hover img {
-            filter: grayscale(0%);
-        }
-        
+
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+
         .festivals-list {
             list-style: none;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1rem 4rem;
         }
-        
-        .festivals-list li {
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--border);
-            font-size: 0.95rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .festivals-list li::after {
-            content: '→';
-            opacity: 0;
-            transition: opacity 0.3s;
-            color: var(--accent);
-        }
-        
-        .festivals-list li:hover::after {
-            opacity: 1;
-        }
-        
+
+            .festivals-list li {
+                padding: 1rem 0;
+                border-bottom: 1px solid var(--border);
+                font-size: 0.95rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+                .festivals-list li::after {
+                    content: '→';
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                    color: var(--accent);
+                }
+
+                .festivals-list li:hover::after {
+                    opacity: 1;
+                }
+
         .role-box {
             background: #f5f5f5;
             padding: 3rem;
@@ -334,26 +353,26 @@
             gap: 4rem;
             align-items: start;
         }
-        
+
         .role-label {
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
             color: var(--text-light);
         }
-        
+
         .role-content h3 {
             font-size: 1.5rem;
             font-weight: 400;
             margin-bottom: 1rem;
             letter-spacing: -0.01em;
         }
-        
+
         .role-content p {
             color: var(--text-light);
             max-width: 600px;
         }
-        
+
         footer {
             padding: 4rem;
             border-top: 1px solid var(--border);
@@ -361,91 +380,91 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .footer-left {
             font-size: 0.85rem;
             color: var(--text-light);
         }
-        
+
         .footer-right {
             display: flex;
             gap: 2rem;
         }
-        
-        .footer-right a {
-            text-decoration: none;
-            color: var(--text);
-            font-size: 0.9rem;
-            position: relative;
-        }
-        
-        .footer-right a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--accent);
-            transition: width 0.3s;
-        }
-        
-        .footer-right a:hover::after {
-            width: 100%;
-        }
-        
+
+            .footer-right a {
+                text-decoration: none;
+                color: var(--text);
+                font-size: 0.9rem;
+                position: relative;
+            }
+
+                .footer-right a::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                    width: 0;
+                    height: 1px;
+                    background: var(--accent);
+                    transition: width 0.3s;
+                }
+
+                .footer-right a:hover::after {
+                    width: 100%;
+                }
+
         @media (max-width: 1024px) {
             .hero {
                 grid-template-columns: 1fr;
                 gap: 4rem;
             }
-            
+
             .hero-content {
                 padding-right: 0;
             }
-            
+
             .hero-image {
                 height: 50vh;
             }
-            
+
             .bio-grid,
             .section-header,
             .role-box {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
-            
+
             .projects-grid,
             .gallery-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .festivals-list {
                 grid-template-columns: 1fr;
             }
         }
-        
+
         @media (max-width: 768px) {
             nav {
                 padding: 1.5rem;
             }
-            
+
             .nav-links {
                 display: none;
             }
-            
+
             .hero,
             section {
                 padding: 6rem 1.5rem 3rem;
             }
-            
+
             footer {
                 flex-direction: column;
                 gap: 2rem;
                 text-align: center;
             }
         }
-        
+
         ::selection {
             background: var(--text);
             color: var(--bg);
@@ -458,10 +477,11 @@
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#work">Work</a></li>
+            <li><a href="#video">Video</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    
+
     <header class="hero">
         <div class="hero-content">
             <span class="hero-label">Sound Artist & Audio Designer</span>
@@ -489,20 +509,20 @@
             <span class="image-caption">Portrait, 2024</span>
         </div>
     </header>
-    
+
     <section id="about">
         <div class="section-header">
             <span class="section-number">01 — About</span>
             <h2>Practice & Background</h2>
         </div>
-        
+
         <div class="bio-grid">
             <div></div>
             <div class="bio-text">
                 <p>María Castro is a Colombian composer of electroacoustic music, sound artist, and Senior Audio Designer specializing in video games with over seven years of professional experience. Her work explores the intersection of art, science, and interactive technology.</p>
-                
+
                 <p>She integrates electroacoustic composition, soundscapes and sound design with interactivity, using digital tools to explore new forms of sonic expression in both physical and virtual contexts. She has contributed to international projects in video games, VR/AR, and interactive installations, collaborating with multidisciplinary teams to ensure that sound and music are coherently integrated with the artistic narrative.</p>
-                
+
                 <p>Holding a degree in contemporary composition and a master's in electroacoustic composition and new technologies, she applies her training in music, technology, and interactive media to audio projects and immersive sonic environments.</p>
             </div>
             <div class="bio-image">
@@ -510,13 +530,13 @@
             </div>
         </div>
     </section>
-    
+
     <section id="work">
         <div class="section-header">
             <span class="section-number">02 — Selected Work</span>
             <h2>Projects & Collaborations</h2>
         </div>
-        
+
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-image">
@@ -525,7 +545,7 @@
                 <h3 class="project-title">Live Electroacoustic Performance</h3>
                 <p class="project-meta">Performance / Real-time Processing</p>
             </div>
-            
+
             <div class="project-card">
                 <div class="project-image">
                     <img src="https://raw.githubusercontent.com/scherzo98/websitescherzonoise/refs/heads/main/Images/IMG_20251029_004445%20(1).jpg" alt="Studio Work">
@@ -534,20 +554,31 @@
                 <p class="project-meta">Electroacoustic / Sound Design</p>
             </div>
         </div>
-        
+
         <div class="gallery-grid">
             <div class="gallery-item">
                 <img src="https://raw.githubusercontent.com/scherzo98/websitescherzonoise/refs/heads/main/Images/yop%20field%20recordist.jpg" alt="Field Recording">
             </div>
         </div>
     </section>
-    
+
+    <section id="video">
+        <div class="section-header">
+            <span class="section-number">03 — Video</span>
+            <h2>Selected Work</h2>
+        </div>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/6GeKAoruO6c?si=1vg3fHyWtW-5T75T" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
     <section>
         <div class="section-header">
-            <span class="section-number">03 — Festivals</span>
+            <span class="section-number">04 — Festivals</span>
             <h2>Exhibitions & Venues</h2>
         </div>
-        
+
         <ul class="festivals-list">
             <li>Ars Electronica Forum Wallis</li>
             <li>Q-O2</li>
@@ -556,7 +587,7 @@
             <li>Festival Paralelo</li>
         </ul>
     </section>
-    
+
     <section>
         <div class="role-box">
             <span class="role-label">Current Position</span>
@@ -566,7 +597,7 @@
             </div>
         </div>
     </section>
-    
+
     <footer id="contact">
         <div class="footer-left">
             © 2024 María Castro — All rights reserved
