@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liminal Gesture  María Castro</title>
+    <title>Liminal Gesture — Maria Castro</title>
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="../../assets/css/project.css">
 </head>
 <body>
     <nav class="main-nav">
-        <a href="../../index.html" class="logo">María Castro</a>
+        <a href="../../index.html" class="logo">Maria Castro</a>
         <ul class="nav-links">
             <li><a href="../../about.html">About</a></li>
             <li class="dropdown">
                 <a href="#">Projects</a>
                 <ul class="dropdown-menu">
                     <li><a href="../liminal-gesture/">Liminal Gesture</a></li>
-                    <li><a href="../sinfonia-biotica/">Sinfonía Biótica</a></li>
+                    <li><a href="../sinfonia-biotica/">Sinfonia Biotica</a></li>
                     <li><a href="../pink-noise/">Pink Noise</a></li>
                     <li><a href="../mareo-migrante/">Mareo Migrante MM</a></li>
                     <li><a href="../algorithm-fest/">{PinkNoise.ar} Algorithm Music Fest</a></li>
@@ -31,7 +31,7 @@
 
     <header class="project-hero">
         <div class="project-hero-image">
-            <img src="../../assets/img/projects/liminal-gesture/hero.jpg" alt="Liminal Gesture">
+            <img src="assets/img/1725558106143.JPG" alt="Liminal Gesture">
         </div>
         <div class="project-hero-content">
             <span class="project-type">Interactive Sound Installation</span>
@@ -41,26 +41,63 @@
 
     <main class="project-main">
         <div class="project-description">
-            <p>Liminal Gesture is an interactive sound installation that explores the boundaries between physical movement and sonic response. Through custom sensors and real-time audio processing, the installation translates corporeal gestures into evolving soundscapes, creating a dialogue between the body and the acoustic environment.</p>
+            <p>Liminal Gesture is an interactive electroacoustic sound installation that investigates expanded listening through bodily gesture, movement, and real-time sonic interaction. Developed as both an artistic work and a research project, the installation explores how gesture can function simultaneously as a sonic action, a listening technology, and a performative interface between body and sound.</p>
 
-            <p>The work investigates the threshold spaces where intention meets intuition, where the conscious control of movement dissolves into reactive improvisation. Each interaction generates a unique sonic fingerprint, never to be repeated exactly.</p>
+            <p>The work combines motion tracking technologies, real-time synthesis, spatial audio, and gestural mapping to create an immersive environment in which participants generate and transform sound through physical movement. The installation was developed using Kinect 2, Leap Motion 2, SuperCollider, OSC communication protocols, GECO, and TouchDesigner, integrating gesture recognition, live sound synthesis, and responsive audiovisual interaction within a quadraphonic spatial audio system.</p>
+
+            <p>A central aspect of the project is the contrast between two gestural paradigms: macro gestures and micro gestures. Kinect captures large-scale bodily movement — posture, displacement, and expansive physical actions — while Leap Motion focuses on highly detailed hand and finger interaction. These contrasting modes of interaction were used to investigate how different scales of bodily movement influence listening, sound perception, and musical control.</p>
+
+            <p>The sound design and compositional system were developed simultaneously with the gestural interaction architecture, establishing a bidirectional relationship between sound behavior and movement design. For macro bodily gestures, the project employed low-frequency and physically "heavy" sonic materials, including processed cello recordings and field recordings transformed through granular synthesis. In contrast, the Leap Motion interaction system focused on highly reactive microgestures controlling detailed high-frequency textures generated through noise synthesis, resonant filter banks, impulses, and granular processing of metallic, plastic, and glass recordings.</p>
+
+            <p>Using OSC-based communication pipelines, gestural data was mapped in real time to granular synthesis parameters such as grain density, duration, playback rate, spatialization, and spectral behavior. The system was designed around continuous modulation and non-linear interaction rather than discrete triggering, allowing sound to evolve dynamically through movement. In SuperCollider, custom instruments, granular engines, sequencers, and synthesized systems were built specifically for the installation, alongside live coding structures and generative pattern systems used during performance.</p>
+
+            <p>The installation also explored the idea of sensors as musical instruments rather than purely reactive interfaces. Participants and performers were required to develop bodily precision, coordination, and active listening practices in order to interact effectively with the system. This process revealed parallels between learning traditional instruments and learning gestural digital systems, emphasizing calibration, physical endurance, embodied control, and performative awareness.</p>
+
+            <p>Spatialization played a key compositional role within the work. The installation used a quadraphonic sound system divided between the two gestural paradigms, spatially separating Kinect and Leap Motion sound worlds while allowing interaction and dialogue between them. Visual stop-motion projections guided participants through specific movement vocabularies and gestural possibilities, reinforcing the relationship between movement, perception, and sonic transformation.</p>
+
+            <p>Conceptually, Liminal Gesture investigates expanded listening as a multisensory and embodied experience that transcends purely auditory perception. Through the interaction between body, gesture, technology, and sound, the work proposes an alternative understanding of listening in which movement itself becomes part of the sonic and compositional process.</p>
         </div>
 
         <div class="project-gallery">
             <div class="gallery-item wide">
-                <img src="../../assets/img/projects/liminal-gesture/gallery-1.jpg" alt="Installation view">
+                <img src="assets/img/1725558106205.JPG" alt="Installation view">
             </div>
             <div class="gallery-item">
-                <img src="../../assets/img/projects/liminal-gesture/gallery-2.jpg" alt="Detail">
+                <img src="assets/img/1725558106220.JPG" alt="Macro gesture interaction">
             </div>
             <div class="gallery-item">
-                <img src="../../assets/img/projects/liminal-gesture/gallery-3.jpg" alt="Sensor">
+                <img src="assets/img/1725558106270.JPG" alt="Leap Motion micro gesture">
+            </div>
+            <div class="gallery-item wide">
+                <img src="assets/img/1725558106408.jpg" alt="Spatial audio setup">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/img/Captura%20de%20pantalla.png" alt="TouchDesigner interface">
             </div>
         </div>
 
-        <div class="project-video">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" title="Liminal Gesture documentation" allowfullscreen></iframe>
+        <div class="project-videos">
+            <h3>Video Documentation</h3>
+
+            <div class="video-item">
+                <h4>Hoover Synthesizer</h4>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/6GeKAoruO6c?si=HQKmb2ktEfT7M3Gk" title="Liminal Gesture - Hoover Synthesizer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <h4>OSC Granulator 1</h4>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/2I_nEWo_Vhs?si=vCbWJJVvC7uoAp8e" title="Liminal Gesture - OSC Granulator 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <h4>On / Off Switch</h4>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/ciECmf-mMRM?si=TCLu1js0cU43eEYg" title="Liminal Gesture - On / Off Switch" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
 
@@ -70,25 +107,25 @@
                 <p>2024</p>
             </div>
             <div class="meta-item">
-                <h4>Venue</h4>
-                <p>Ars Electronica Forum Wallis</p>
+                <h4>Technologies</h4>
+                <p>Kinect 2, Leap Motion 2, SuperCollider, OSC, GECO, TouchDesigner</p>
             </div>
             <div class="meta-item">
-                <h4>Technologies</h4>
-                <p>SuperCollider, Arduino, Kinect</p>
+                <h4>Audio System</h4>
+                <p>Quadraphonic spatial audio</p>
             </div>
         </div>
 
         <nav class="project-nav">
             <a href="../sinfonia-biotica/" class="next-project">
                 <span>Next Project</span>
-                <h3>Sinfonía Biótica</h3>
+                <h3>Sinfonia Biotica</h3>
             </a>
         </nav>
     </main>
 
     <footer>
-        <div class="footer-left"> 2024 María Castro</div>
+        <div class="footer-left">© 2024 Maria Castro</div>
     </footer>
 
     <script src="../../assets/js/main.js"></script>

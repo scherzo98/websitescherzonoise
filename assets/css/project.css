@@ -103,11 +103,30 @@
         transform: scale(1.02);
     }
 
-/* Video */
-.project-video {
-    margin-bottom: 4rem;
+/* Videos Section */
+.project-videos {
+    margin: 4rem 0;
 }
 
+    .project-videos h3 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        letter-spacing: -0.02em;
+    }
+
+.video-item {
+    margin-bottom: 3rem;
+}
+
+    .video-item h4 {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        color: var(--text-light);
+    }
+
+/* Video Container (shared) */
 .video-container {
     position: relative;
     width: 100%;
