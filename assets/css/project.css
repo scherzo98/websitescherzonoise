@@ -182,6 +182,27 @@
     color: var(--text);
 }
 
+/* Project Links */
+.project-links {
+    margin: 3rem 0;
+}
+
+.external-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: var(--text);
+    color: var(--bg);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+    .external-link:hover {
+        background: var(--accent);
+    }
+
 /* Project Navigation */
 .project-nav {
     display: flex;
