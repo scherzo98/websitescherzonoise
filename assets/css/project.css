@@ -82,7 +82,7 @@
         margin-bottom: 1.5rem;
     }
 
-/* Gallery */
+/* Gallery - FOTOS EN COLOR */
 .project-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -107,12 +107,10 @@
         height: 100%;
         object-fit: cover;
         display: block;
-        filter: grayscale(100%);
-        transition: all 0.6s ease;
+        transition: transform 0.6s ease;
     }
 
     .gallery-item:hover img {
-        filter: grayscale(0%);
         transform: scale(1.02);
     }
 
