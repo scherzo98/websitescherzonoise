@@ -6,6 +6,39 @@
     <title>Pink Noise — María Castro</title>
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="../../assets/css/project.css">
+    <style>
+        /* Override para que las imágenes se vean completas sin recortar */
+        .project-hero-image img {
+            object-fit: contain;
+            background: #1a1a1a;
+        }
+
+        .gallery-item img {
+            object-fit: contain;
+            background: #f5f5f5;
+        }
+
+        /* Ajuste para que la galería respete proporciones reales */
+        .gallery-item {
+            aspect-ratio: auto;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .gallery-item.wide {
+                aspect-ratio: auto;
+                min-height: 400px;
+            }
+
+            .gallery-item img {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
+            }
+    </style>
 </head>
 <body>
     <nav class="main-nav">
@@ -46,6 +79,12 @@
             <p>Each performance is a unique algorithmic improvisation where code becomes instrument. The project investigates how randomness and controlled chaos can produce emotionally resonant musical structures, drawing from both electroacoustic tradition and contemporary computer music.</p>
         </div>
 
+        <div class="project-video">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/sMGDgehOPZA?si=G_2_zHyUAcqdYq_o" title="Pink Noise live set" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
         <div class="project-gallery">
             <div class="gallery-item wide">
                 <img src="assets/img/DSCF2033.JPG" alt="Modular setup">
@@ -58,16 +97,10 @@
             </div>
         </div>
 
-        <div class="project-video">
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/sMGDgehOPZA?si=G_2_zHyUAcqdYq_o" title="Pink Noise live set" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
-
         <div class="project-meta">
             <div class="meta-item">
                 <h4>Year</h4>
-                <p>2023 — Ongoing</p>
+                <p>2026 — Ongoing</p>
             </div>
             <div class="meta-item">
                 <h4>Format</h4>
@@ -88,7 +121,7 @@
     </main>
 
     <footer>
-        <div class="footer-left">© 2024 María Castro</div>
+        <div class="footer-left">© 2026 María Castro</div>
     </footer>
 
     <script src="../../assets/js/main.js"></script>
