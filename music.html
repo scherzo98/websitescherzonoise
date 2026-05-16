@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music  María Castro</title>
+    <title>Music — María Castro</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
+        /* Solo estilos específicos de esta página */
         .page-header {
             padding: 8rem 4rem 2rem;
             border-bottom: 1px solid var(--border);
@@ -46,6 +47,30 @@
             height: 300px;
             border: 0;
         }
+
+        .soundcloud-credit {
+            font-size: 10px;
+            color: #cccccc;
+            line-break: anywhere;
+            word-break: normal;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+            font-weight: 100;
+            margin-top: 0.5rem;
+        }
+
+            .soundcloud-credit a {
+                color: #cccccc;
+                text-decoration: none;
+            }
+
+        @media (max-width: 768px) {
+            .page-header, .content {
+                padding: 6rem 1.5rem 2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -77,23 +102,35 @@
 
     <div class="content">
         <div class="playlist">
-            <h3>Electroacoustic Works</h3>
-            <iframe class="soundcloud-embed" src="https://w.soundcloud.com/player/?url=URL_DE_TU_PLAYLIST&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+            <h3>Contemporary Music</h3>
+            <iframe class="soundcloud-embed" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1400948458&color=%23646484&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <div class="soundcloud-credit">
+                <a href="https://soundcloud.com/scherzonoise" title="María Castro" target="_blank">María Castro</a> ·
+                <a href="https://soundcloud.com/scherzonoise/sets/contemporary-music" title="Contemporary Music" target="_blank">Contemporary Music</a>
+            </div>
         </div>
 
         <div class="playlist">
-            <h3>Soundscapes & Field Recordings</h3>
-            <iframe class="soundcloud-embed" src="https://w.soundcloud.com/player/?url=URL_DE_TU_PLAYLIST&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+            <h3>Electroacoustic Music</h3>
+            <iframe class="soundcloud-embed" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1400940631&color=%239295b2&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <div class="soundcloud-credit">
+                <a href="https://soundcloud.com/scherzonoise" title="María Castro" target="_blank">María Castro</a> ·
+                <a href="https://soundcloud.com/scherzonoise/sets/electroacustica" title="Electroacoustic Music" target="_blank">Electroacoustic Music</a>
+            </div>
         </div>
 
         <div class="playlist">
-            <h3>Game Audio & Interactive Sound</h3>
-            <iframe class="soundcloud-embed" src="https://w.soundcloud.com/player/?url=URL_DE_TU_PLAYLIST&color=%23ff0000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+            <h3>Music Composition</h3>
+            <iframe class="soundcloud-embed" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%253Aplaylists%253A1400954170&color=%239295b2&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <div class="soundcloud-credit">
+                <a href="https://soundcloud.com/scherzonoise" title="María Castro" target="_blank">María Castro</a> ·
+                <a href="https://soundcloud.com/scherzonoise/sets/music-composition" title="Music Composition" target="_blank">Music Composition</a>
+            </div>
         </div>
     </div>
 
     <footer>
-        <div class="footer-left"> 2024 María Castro</div>
+        <div class="footer-left">© 2024 María Castro</div>
         <div class="footer-right">
             <a href="mailto:contact@mariacastro.audio">Email</a>
             <a href="https://sinfoniabiotica.xyz" target="_blank">Sinfonía Biótica</a>
