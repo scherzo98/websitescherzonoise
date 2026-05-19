@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experimental / Post-digital Lutherie  María Castro</title>
+    <title>Experimental / Post-digital Lutherie — María Castro</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
         .page-header {
@@ -25,54 +25,57 @@
 
         .content {
             padding: 4rem;
-            max-width: 1100px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        .instrument-card {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+        .project-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
             margin-bottom: 4rem;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 4rem;
         }
 
-            .instrument-card:last-child {
-                border-bottom: none;
+            .project-description p {
+                margin-bottom: 1.5rem;
             }
 
-        .instrument-media {
+        .nime-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .nime-item {
+            aspect-ratio: auto;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background: #f5f5f5;
-            aspect-ratio: 4/3;
             overflow: hidden;
         }
 
-            .instrument-media img,
-            .instrument-media iframe {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
-                border: 0;
+            .nime-item.wide {
+                grid-column: span 2;
+                min-height: 400px;
             }
 
-        .instrument-info h3 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
-        }
+            .nime-item img {
+                width: auto;
+                height: auto;
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
 
-        .instrument-info p {
-            color: var(--text-light);
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        @media (max-width: 1024px) {
-            .instrument-card {
+        @media (max-width: 768px) {
+            .nime-gallery {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+            }
+
+            .nime-item.wide {
+                grid-column: span 1;
             }
         }
     </style>
@@ -101,39 +104,35 @@
 
     <header class="page-header">
         <h1>Experimental / Post-digital Lutherie</h1>
-        <p>Handcrafted instruments and sound objects that bridge analog materiality and digital processing. Each instrument is designed as a hybrid system where acoustic resonance meets electronic intervention.</p>
+        <p>Handcrafted instruments and sound objects that bridge analog materiality and digital processing.</p>
     </header>
 
     <div class="content">
-        <div class="instrument-card">
-            <div class="instrument-media">
-                <img src="https://raw.githubusercontent.com/scherzo98/websitescherzonoise/refs/heads/main/Images/0181-9.jpg" alt="Resonant Body">
-            </div>
-            <div class="instrument-info">
-                <h3>Resonant Body #1</h3>
-                <p>A feedback-based instrument using piezoelectric transducers and resonant wooden chambers. The instrument creates self-oscillating drones that can be shaped through physical pressure and position changes.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" title="Resonant Body demonstration" allowfullscreen></iframe>
-                </div>
-            </div>
+        <div class="project-description">
+            <p><strong>Interactive Systems / MPU-6050 MIDI Controller Prototype</strong></p>
+
+            <p>This project explores the use of motion sensing as an interface for musical control through the development of a prototype system based on the MPU-6050 sensor, combining an accelerometer and gyroscope. The work was developed within the context of Interactive Systems studies and focuses on translating physical movement into structured musical output.</p>
+
+            <p>The system maps real-time motion data captured by the sensor to MIDI messages, using the gyroscope's angular values to control pitch information within the standard MIDI range (0–127). Through this mapping strategy, physical orientation and movement become directly linked to musical parameters, enabling gesture-based interaction with sound.</p>
+
+            <p>The prototype investigates the relationship between bodily motion and musical structure, exploring how continuous physical gestures can be transformed into discrete musical events through data quantization and MIDI communication protocols. This approach allows movement to function as a performative input, turning the body into an expressive interface for musical generation and control.</p>
         </div>
 
-        <div class="instrument-card">
-            <div class="instrument-media">
-                <img src="https://raw.githubusercontent.com/scherzo98/websitescherzonoise/refs/heads/main/Images/yop%20field%20recordist.jpg" alt="Contact Array">
+        <div class="nime-gallery">
+            <div class="nime-item wide">
+                <img src="https://raw.githubusercontent.com/scherzo98/websitescherzonoise/refs/heads/main/Images/NIME1_Circuit.jpg" alt="NIME Circuit">
             </div>
-            <div class="instrument-info">
-                <h3>Contact Microphone Array</h3>
-                <p>A modular system of contact microphones designed for amplified object manipulation. Each channel is processed independently, creating spatialized textures from everyday materials.</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" title="Contact Array performance" allowfullscreen></iframe>
-                </div>
+            <div class="nime-item">
+                <img src="https://raw.githubusercontent.com/scherzo98/websitescherzonoise/refs/heads/main/Images/NIME1_DAW%20connection.jpg" alt="NIME DAW Connection">
+            </div>
+            <div class="nime-item">
+                <img src="https://raw.githubusercontent.com/scherzo98/websitescherzonoise/refs/heads/main/Images/NIME1_DAW-%20modules%20.png" alt="NIME DAW Modules">
             </div>
         </div>
     </div>
 
     <footer>
-        <div class="footer-left"> 2024 María Castro</div>
+        <div class="footer-left">© 2026 María Castro</div>
         <div class="footer-right">
             <a href="mailto:contact@mariacastro.audio">Email</a>
             <a href="https://sinfoniabiotica.xyz" target="_blank">Sinfonía Biótica</a>
