@@ -54,6 +54,7 @@
             justify-content: center;
             background: #f5f5f5;
             overflow: hidden;
+            cursor: pointer;
         }
 
             .nime-item.wide {
@@ -67,7 +68,53 @@
                 max-width: 100%;
                 max-height: 100%;
                 object-fit: contain;
+                filter: grayscale(100%);
+                transition: filter 0.6s ease, transform 0.6s ease;
             }
+
+            .nime-item:hover img {
+                filter: grayscale(0%);
+                transform: scale(1.02);
+            }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+            .lightbox.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .lightbox img {
+                max-width: 90%;
+                max-height: 90%;
+                object-fit: contain;
+            }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
 
         @media (max-width: 768px) {
             .nime-gallery {
@@ -119,16 +166,22 @@
         </div>
 
         <div class="nime-gallery">
-            <div class="nime-item wide">
+            <div class="nime-item wide" onclick="openLightbox(this)">
                 <img src="https://raw.githubusercontent.com/scherzo98/websitescherzonoise/refs/heads/main/Images/NIME1_Circuit.jpg" alt="NIME Circuit">
             </div>
-            <div class="nime-item">
+            <div class="nime-item" onclick="openLightbox(this)">
                 <img src="https://raw.githubusercontent.com/scherzo98/websitescherzonoise/refs/heads/main/Images/NIME1_DAW%20connection.jpg" alt="NIME DAW Connection">
             </div>
-            <div class="nime-item">
+            <div class="nime-item" onclick="openLightbox(this)">
                 <img src="https://raw.githubusercontent.com/scherzo98/websitescherzonoise/refs/heads/main/Images/NIME1_DAW-%20modules%20.png" alt="NIME DAW Modules">
             </div>
         </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close">&times;</button>
+        <img src="" alt="" id="lightbox-img">
     </div>
 
     <footer>
@@ -140,5 +193,28 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
 </body>
 </html>
