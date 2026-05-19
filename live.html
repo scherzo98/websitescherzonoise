@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live  Maria Castro</title>
+    <title>Live — María Castro</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <style>
         .page-header {
@@ -25,33 +25,32 @@
 
         .content {
             padding: 4rem;
-            max-width: 1100px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        .performance-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
+        .performance-section {
+            margin-bottom: 6rem;
         }
 
-        .performance-card {
-            border: 1px solid var(--border);
-            padding: 2rem;
-        }
-
-            .performance-card h3 {
-                font-size: 1.2rem;
-                font-weight: 500;
-                margin-bottom: 1rem;
+            .performance-section:last-child {
+                margin-bottom: 0;
             }
 
-        .performance-date {
+        .performance-title {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .performance-subtitle {
             font-size: 0.85rem;
             color: var(--text-light);
-            margin-bottom: 1.5rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
+            margin-bottom: 2rem;
+            display: block;
         }
 
         .video-container {
@@ -61,7 +60,7 @@
             height: 0;
             overflow: hidden;
             background: #f5f5f5;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
             .video-container iframe {
@@ -73,28 +72,39 @@
                 border: 0;
             }
 
-        .performance-venue {
-            font-size: 0.9rem;
+        .performance-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
             color: var(--text-light);
         }
 
-        @media (max-width: 1024px) {
-            .performance-grid {
-                grid-template-columns: 1fr;
+            .performance-description p {
+                margin-bottom: 1.5rem;
+            }
+
+            .performance-description strong {
+                color: var(--text);
+                font-weight: 500;
+            }
+
+        @media (max-width: 768px) {
+            .page-header,
+            .content {
+                padding: 6rem 1.5rem 2rem;
             }
         }
     </style>
 </head>
 <body>
     <nav class="main-nav">
-        <a href="index.html" class="logo">Maria Castro</a>
+        <a href="index.html" class="logo">María Castro</a>
         <ul class="nav-links">
             <li><a href="about.html">About</a></li>
             <li class="dropdown">
                 <a href="#">Projects</a>
                 <ul class="dropdown-menu">
                     <li><a href="projects/liminal-gesture/">Liminal Gesture</a></li>
-                    <li><a href="projects/sinfonia-biotica/">Sinfonia Biotica</a></li>
+                    <li><a href="projects/sinfonia-biotica/">Sinfonía Biótica</a></li>
                     <li><a href="projects/pink-noise/">Pink Noise</a></li>
                     <li><a href="projects/mareo-migrante/">Mareo Migrante MM</a></li>
                     <li><a href="projects/algorithm-fest/">{PinkNoise.ar} Algorithm Music Fest</a></li>
@@ -113,50 +123,45 @@
     </header>
 
     <div class="content">
-        <div class="performance-grid">
-            <div class="performance-card">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" title="Live performance" allowfullscreen></iframe>
-                </div>
-                <span class="performance-date">2024 - Ars Electronica Forum Wallis</span>
-                <h3>Live Coding Set</h3>
-                <p class="performance-venue">Real-time algorithmic composition with SuperCollider and modular synthesizer.</p>
-            </div>
 
-            <div class="performance-card">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" title="Live performance" allowfullscreen></iframe>
-                </div>
-                <span class="performance-date">2024 - Q-O2</span>
-                <h3>Electroacoustic Improvisation</h3>
-                <p class="performance-venue">Solo performance using custom instruments and live processing.</p>
-            </div>
+        <!-- Performance 1 -->
+        <div class="performance-section">
+            <h2 class="performance-title">{Embrace ERRØR}.code(party)</h2>
+            <span class="performance-subtitle">Live Coding Performance</span>
 
-            <div class="performance-card">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" title="Live performance" allowfullscreen></iframe>
-                </div>
-                <span class="performance-date">2023 - Festival Paralelo</span>
-                <h3>Modular Synth Performance</h3>
-                <p class="performance-venue">Analog and digital synthesis in quadraphonic spatialization.</p>
-            </div>
-
-            <div class="performance-card">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_AQUI" title="Live performance" allowfullscreen></iframe>
-                </div>
-                <span class="performance-date">2023 - BAH Festival</span>
-                <h3>Interactive Installation Performance</h3>
-                <p class="performance-venue">Audience-responsive system with motion tracking and generative audio.</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/4PNkbHEItX4?si=QaNcZ4Cd9LeN9pBL"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                </iframe>
             </div>
         </div>
+
+        <!-- Performance 2 -->
+        <div class="performance-section">
+            <h2 class="performance-title">Sonido Futuro — Live Performance</h2>
+            <span class="performance-subtitle">Círculo de Bellas Artes</span>
+
+            <div class="performance-description">
+                <p>Experimental electronic / noise live performance presented as part of the closing concert lineup for Sonido Futuro at the Círculo de Bellas Artes, alongside cute::wire.</p>
+
+                <p>The performance was structured as a free improvisation guided by a broader macro-compositional form, combining live coding, modular synthesis, granular processing, noise textures, and processed voice. The set was developed through a hybrid performance system built around SuperCollider, Hydra live visuals, and the Moog Matriarch.</p>
+
+                <p>A central aspect of the performance involved a bidirectional MIDI feedback system between SuperCollider and the synthesizer. The Moog Matriarch continuously sent MIDI information to SuperCollider while simultaneously receiving MIDI data generated and processed in real time by the software environment, creating an evolving feedback relationship between live performance, algorithmic processes, and analog synthesis. This system allowed the sonic structure to emerge dynamically through interaction between performer, code, and instrument.</p>
+
+                <p>The performance also incorporated granular synthesis techniques, live audiovisual coding with Hydra, and processed human voice manipulated through external effects pedals. Across the set, layers of noise, unstable textures, harmonic fragments, and gestural improvisation were combined into an evolving electroacoustic environment balancing algorithmic behavior with real-time performative control.</p>
+            </div>
+        </div>
+
     </div>
 
     <footer>
-        <div class="footer-left"> 2024 Maria Castro</div>
+        <div class="footer-left">© 2026 María Castro</div>
         <div class="footer-right">
             <a href="mailto:contact@mariacastro.audio">Email</a>
-            <a href="https://sinfoniabiotica.xyz" target="_blank">Sinfonia Biotica</a>
+            <a href="https://sinfoniabiotica.xyz" target="_blank">Sinfonía Biótica</a>
         </div>
     </footer>
 
