@@ -25,10 +25,34 @@
 
         .content {
             padding: 4rem;
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
+        /* VIDEO PRIMERO */
+        .video-section {
+            margin-bottom: 4rem;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #f5f5f5;
+        }
+
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+
+        /* TEXTO DESPUÉS */
         .project-description {
             font-size: 1.1rem;
             line-height: 1.8;
@@ -40,6 +64,12 @@
                 margin-bottom: 1.5rem;
             }
 
+            .project-description strong {
+                color: var(--text);
+                font-weight: 500;
+            }
+
+        /* FOTOS AL FINAL */
         .nime-gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -124,6 +154,10 @@
             .nime-item.wide {
                 grid-column: span 1;
             }
+
+            .content {
+                padding: 2rem 1.5rem;
+            }
         }
     </style>
 </head>
@@ -155,6 +189,20 @@
     </header>
 
     <div class="content">
+
+        <!-- 1. VIDEO PRIMERO -->
+        <div class="video-section">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/h_QjGPnbG54?si=UwAr62gStPcIwQ0X"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- 2. TEXTO DESPUÉS -->
         <div class="project-description">
             <p><strong>Interactive Systems / MPU-6050 MIDI Controller Prototype</strong></p>
 
@@ -165,6 +213,7 @@
             <p>The prototype investigates the relationship between bodily motion and musical structure, exploring how continuous physical gestures can be transformed into discrete musical events through data quantization and MIDI communication protocols. This approach allows movement to function as a performative input, turning the body into an expressive interface for musical generation and control.</p>
         </div>
 
+        <!-- 3. FOTOS AL FINAL -->
         <div class="nime-gallery">
             <div class="nime-item wide" onclick="openLightbox(this)">
                 <img src="https://raw.githubusercontent.com/scherzo98/websitescherzonoise/refs/heads/main/Images/NIME1_Circuit.jpg" alt="NIME Circuit">
