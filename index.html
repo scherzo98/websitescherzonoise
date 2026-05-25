@@ -2,35 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>María Castro - Sound Artist</title>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <!-- NAV: logo + botón hamburguesa + menú desktop -->
+    <!-- NAV: solo logo + botón hamburguesa -->
     <nav class="main-nav">
         <a href="index.html" class="logo">María Castro</a>
 
-        <!-- Menú Desktop (visible solo en pantallas grandes) -->
-        <ul class="nav-links">
-            <li><a href="about.html">About</a></li>
-            <li class="dropdown">
-                <a href="#">Projects</a>
-                <ul class="dropdown-menu">
-                    <li><a href="projects/liminal-gesture/">Liminal Gesture</a></li>
-                    <li><a href="projects/sinfonia-biotica/">Sinfonía Biótica</a></li>
-                    <li><a href="projects/pink-noise/">Pink Noise</a></li>
-                    <li><a href="projects/mareo-migrante/">Mareo Migrante MM</a></li>
-                    <li><a href="projects/algorithm-fest/">{PinkNoise.ar} Algorithm Music Fest</a></li>
-                </ul>
-            </li>
-            <li><a href="lutherie.html">Lutherie</a></li>
-            <li><a href="music.html">Music</a></li>
-            <li><a href="live.html">Live</a></li>
-            <li><a href="https://marcastronoise.weebly.com/" target="_blank">Game Audio</a></li>
-        </ul>
-
-        <!-- Botón hamburguesa (solo visible en móvil) -->
         <button class="menu-toggle" id="menuOpen" aria-label="Abrir menú" aria-expanded="false">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -38,7 +18,7 @@
         </button>
     </nav>
 
-    <!-- MENÚ MÓVIL OVERLAY -->
+    <!-- MENÚ MÓVIL: FUERA del nav, directo en body -->
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-header">
             <span class="mobile-menu-logo">María Castro</span>
@@ -50,11 +30,8 @@
         <ul class="mobile-nav-links">
             <li><a href="about.html">About</a></li>
             <li class="mobile-dropdown">
-                <div class="mobile-dropdown-label" id="projectsDropdownLabel">
-                    Projects
-                    <span class="dropdown-arrow">▼</span>
-                </div>
-                <ul class="mobile-dropdown-menu" id="projectsDropdownMenu">
+                <span class="mobile-dropdown-label">Projects</span>
+                <ul class="mobile-dropdown-menu">
                     <li><a href="projects/liminal-gesture/">Liminal Gesture</a></li>
                     <li><a href="projects/sinfonia-biotica/">Sinfonía Biótica</a></li>
                     <li><a href="projects/pink-noise/">Pink Noise</a></li>
@@ -168,80 +145,21 @@
         const menuClose = document.getElementById('menuClose');
         const mobileMenu = document.getElementById('mobileMenu');
 
-        // Abrir menú móvil
-        function openMenu() {
+        menuOpen.addEventListener('click', () => {
             mobileMenu.classList.add('active');
             document.body.style.overflow = 'hidden';
-            document.body.style.position = 'fixed';
-            document.body.style.width = '100%';
-        }
+        });
 
-        // Cerrar menú móvil
-        function closeMenu() {
+        menuClose.addEventListener('click', () => {
             mobileMenu.classList.remove('active');
             document.body.style.overflow = '';
-            document.body.style.position = '';
-            document.body.style.width = '';
-        }
-
-        menuOpen.addEventListener('click', openMenu);
-        menuClose.addEventListener('click', closeMenu);
-
-        // Cerrar menú al hacer click en enlaces normales
-        document.querySelectorAll('.mobile-nav-links > li > a').forEach(link => {
-            link.addEventListener('click', closeMenu);
         });
 
-        // ============================================
-        // FUNCIONALIDAD DEL DROPDOWN "PROJECTS" EN MÓVIL
-        // ============================================
-        const dropdownLabel = document.querySelector('.mobile-dropdown-label');
-        const dropdownMenu = document.querySelector('.mobile-dropdown-menu');
-        const dropdownArrow = document.querySelector('.dropdown-arrow');
-
-        if (dropdownLabel && dropdownMenu) {
-            let isOpen = false;
-
-            dropdownLabel.addEventListener('click', (e) => {
-                e.stopPropagation();
-                isOpen = !isOpen;
-
-                if (isOpen) {
-                    dropdownMenu.classList.add('open');
-                    dropdownMenu.style.display = 'block';
-                    dropdownArrow.style.transform = 'rotate(180deg)';
-                    dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + 'px';
-                } else {
-                    dropdownMenu.classList.remove('open');
-                    dropdownMenu.style.display = 'none';
-                    dropdownArrow.style.transform = 'rotate(0deg)';
-                    dropdownMenu.style.maxHeight = '0';
-                }
+        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
             });
-
-            // Ocultar dropdown por defecto
-            dropdownMenu.style.display = 'none';
-            dropdownMenu.style.overflow = 'hidden';
-            dropdownMenu.style.transition = 'max-height 0.3s ease';
-
-            // Cerrar menú completo al hacer click en un proyecto
-            dropdownMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', closeMenu);
-            });
-        }
-
-        // Cerrar menú al hacer clic fuera del contenido (en el overlay)
-        mobileMenu.addEventListener('click', (e) => {
-            if (e.target === mobileMenu) {
-                closeMenu();
-            }
-        });
-
-        // Cerrar menú con tecla ESC
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-                closeMenu();
-            }
         });
     </script>
 </body>
