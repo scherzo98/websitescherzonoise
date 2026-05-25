@@ -10,10 +10,10 @@
     <nav class="main-nav">
         <a href="index.html" class="logo">María Castro</a>
 
-        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
+        <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </button>
 
         <ul class="nav-links">
@@ -137,6 +137,7 @@
             const isOpen = navLinks.classList.toggle('active');
             menuToggle.classList.toggle('active');
             menuToggle.setAttribute('aria-expanded', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
         });
 
         document.querySelectorAll('.nav-links a').forEach(link => {
@@ -144,6 +145,7 @@
                 navLinks.classList.remove('active');
                 menuToggle.classList.remove('active');
                 menuToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
             });
         });
     </script>
