@@ -162,8 +162,10 @@
     </style>
 </head>
 <body>
+    <!-- NAV: logo + menú desktop + botón hamburguesa -->
     <nav class="main-nav">
         <a href="index.html" class="logo">María Castro</a>
+
         <ul class="nav-links">
             <li><a href="about.html">About</a></li>
             <li class="dropdown">
@@ -181,7 +183,41 @@
             <li><a href="live.html">Live</a></li>
             <li><a href="https://marcastronoise.weebly.com/" target="_blank">Game Audio</a></li>
         </ul>
+
+        <button class="menu-toggle" id="menuOpen" aria-label="Abrir menú" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
     </nav>
+
+    <!-- MENÚ MÓVIL -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="mobile-menu-logo">María Castro</span>
+            <button class="menu-close" id="menuClose" aria-label="Cerrar menú">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="about.html">About</a></li>
+            <li class="mobile-dropdown">
+                <span class="mobile-dropdown-label">Projects</span>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="projects/liminal-gesture/">Liminal Gesture</a></li>
+                    <li><a href="projects/sinfonia-biotica/">Sinfonía Biótica</a></li>
+                    <li><a href="projects/pink-noise/">Pink Noise</a></li>
+                    <li><a href="projects/mareo-migrante/">Mareo Migrante MM</a></li>
+                    <li><a href="projects/algorithm-fest/">{PinkNoise.ar} Algorithm Music Fest</a></li>
+                </ul>
+            </li>
+            <li><a href="lutherie.html">Experimental / Post-digital Lutherie</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="live.html">Live</a></li>
+            <li><a href="https://marcastronoise.weebly.com/" target="_blank">Game Audio</a></li>
+        </ul>
+    </div>
 
     <header class="page-header">
         <h1>Experimental / Post-digital Lutherie</h1>

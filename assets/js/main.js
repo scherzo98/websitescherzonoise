@@ -1,5 +1,31 @@
 // assets/js/main.js
 
+// ===== MENÚ MÓVIL =====
+document.addEventListener('DOMContentLoaded', () => {
+    const menuOpen = document.getElementById('menuOpen');
+    const menuClose = document.getElementById('menuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (menuOpen && menuClose && mobileMenu) {
+        menuOpen.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+});
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -13,12 +39,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
-// Mobile menu toggle (if needed later)
-const mobileMenuToggle = () => {
-    const nav = document.querySelector('.main-nav');
-    // Add mobile menu functionality here if needed
-};
 
 // Lazy loading for images
 const lazyLoadImages = () => {

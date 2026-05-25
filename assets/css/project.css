@@ -24,6 +24,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        image-orientation: from-image;
     }
 
 /* Overlay sutil para legibilidad */
@@ -109,6 +110,7 @@
         object-fit: cover;
         display: block;
         transition: transform 0.6s ease;
+        image-orientation: from-image;
     }
 
     .gallery-item:hover img {
@@ -295,36 +297,94 @@ body.grayscale-page .gallery-item:hover img {
     border: none;
 }
 
-/* Responsive */
+/* ============================================
+   RESPONSIVE — TABLET
+   ============================================ */
+@media (max-width: 1024px) {
+    .project-hero {
+        min-height: 60vh;
+    }
+
+    .project-main {
+        padding: 3rem;
+    }
+
+    .project-meta {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
+   RESPONSIVE — MÓVIL
+   ============================================ */
 @media (max-width: 768px) {
     .project-hero {
-        padding: 6rem 1.5rem 2rem;
-        min-height: 50vh;
+        padding: 5rem 1.5rem 2rem;
+        min-height: 45vh;
     }
+
+        .project-hero h1 {
+            font-size: clamp(1.8rem, 8vw, 3rem);
+        }
 
     .project-main {
         padding: 2rem 1.5rem;
     }
 
+    .project-description {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+    }
+
     .project-gallery {
         grid-template-columns: 1fr;
+        gap: 0.8rem;
     }
 
     .gallery-item.wide {
         grid-column: span 1;
+        aspect-ratio: 4/3;
+    }
+
+    .gallery-item {
+        aspect-ratio: 4/3;
+    }
+
+    .project-videos {
+        margin: 3rem 0;
+    }
+
+    .video-item h4 {
+        font-size: 0.9rem;
     }
 
     .project-meta {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .meta-item p {
+        font-size: 0.95rem;
     }
 
     .project-nav {
         justify-content: center;
+        margin-top: 3rem;
     }
 
     .next-project {
         min-width: auto;
         width: 100%;
         text-align: center;
+        padding: 1.5rem;
+    }
+
+        .next-project h3 {
+            font-size: 1.2rem;
+        }
+
+    .external-link {
+        width: 100%;
+        justify-content: center;
     }
 }

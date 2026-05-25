@@ -11,7 +11,6 @@
     <nav class="main-nav">
         <a href="index.html" class="logo">María Castro</a>
 
-        <!-- Menú desktop (visible solo en pantallas grandes) -->
         <ul class="nav-links">
             <li><a href="about.html">About</a></li>
             <li class="dropdown">
@@ -30,7 +29,6 @@
             <li><a href="https://marcastronoise.weebly.com/" target="_blank">Game Audio</a></li>
         </ul>
 
-        <!-- Botón hamburguesa (visible solo en móvil) -->
         <button class="menu-toggle" id="menuOpen" aria-label="Abrir menú" aria-expanded="false">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -38,7 +36,7 @@
         </button>
     </nav>
 
-    <!-- MENÚ MÓVIL: FUERA del nav, directo en body -->
+    <!-- MENÚ MÓVIL -->
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-header">
             <span class="mobile-menu-logo">María Castro</span>
@@ -160,27 +158,6 @@
         </div>
     </footer>
 
-    <script>
-        const menuOpen = document.getElementById('menuOpen');
-        const menuClose = document.getElementById('menuClose');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        menuOpen.addEventListener('click', () => {
-            mobileMenu.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-
-        menuClose.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-
-        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
