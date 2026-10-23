@@ -5,101 +5,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About — María Castro</title>
+
     <link rel="stylesheet" href="assets/css/main.css">
 
     <style>
+        /* About page */
         .about-content {
-            width: calc(100% - 10rem);
-            max-width: 1400px;
-            padding: 8rem 0 4rem;
+            width: calc(100% - 8rem);
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 8rem 0 4rem;
         }
 
             .about-content h1 {
                 font-size: clamp(3rem, 6vw, 5rem);
-                margin-bottom: 2rem;
+                margin-bottom: 2.5rem;
             }
 
-        /* Photo gallery */
-        .bio-gallery {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1.25rem;
-            margin: 3rem 0 4rem;
-            align-items: start;
+        /* Main photograph */
+        .main-photo {
+            width: 100%;
+            margin-bottom: 3rem;
         }
 
-            .bio-gallery img {
+            .main-photo img {
                 display: block;
                 width: 100%;
                 height: auto;
+                max-height: 80vh;
                 object-fit: contain;
+                object-position: left center;
                 filter: grayscale(100%);
-                transition: filter 0.3s ease;
+                transition: filter 0.5s ease;
             }
 
-                .bio-gallery img:hover {
-                    filter: grayscale(0%);
-                }
-
-            .bio-gallery .gallery-main {
-                grid-column: 1 / -1;
-                width: 100%;
-                max-height: none;
+            .main-photo:hover img {
+                filter: grayscale(0%);
             }
 
         /* Biography */
         .about-text {
-            max-width: 1050px;
-            font-size: 1.15rem;
+            max-width: 1000px;
+            font-size: 1.1rem;
             line-height: 1.9;
             text-align: justify;
             text-justify: inter-word;
+            margin-bottom: 4rem;
         }
 
             .about-text p {
-                margin-bottom: 2rem;
+                margin-bottom: 1.75rem;
             }
 
                 .about-text p:last-child {
                     margin-bottom: 0;
                 }
 
-            .about-text strong {
-                font-weight: 600;
+        /* Additional photographs */
+        .secondary-photos {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.25rem;
+            align-items: start;
+            margin-top: 3rem;
+        }
+
+            .secondary-photos img {
+                display: block;
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                filter: grayscale(100%);
+                transition: filter 0.5s ease;
             }
 
-        /* Tablet */
-        @media (max-width: 900px) {
+                .secondary-photos img:hover {
+                    filter: grayscale(0%);
+                }
+
+        /* Responsive layout */
+        @media (max-width: 1024px) {
             .about-content {
-                width: calc(100% - 6rem);
+                width: calc(100% - 5rem);
             }
         }
 
-        /* Mobile */
-        @media (max-width: 700px) {
+        @media (max-width: 768px) {
             .about-content {
                 width: calc(100% - 3rem);
-                padding: 7rem 0 3rem;
+                padding: 6rem 0 3rem;
             }
 
                 .about-content h1 {
                     font-size: clamp(2.5rem, 10vw, 4rem);
                 }
 
-            .bio-gallery {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 0.75rem;
-                margin: 2rem 0 3rem;
+            .main-photo {
+                margin-bottom: 2rem;
             }
 
-                .bio-gallery .gallery-main {
-                    grid-column: 1 / -1;
+                .main-photo img {
+                    max-height: none;
                 }
 
             .about-text {
-                font-size: 1.05rem;
+                font-size: 1rem;
                 line-height: 1.8;
+                margin-bottom: 3rem;
+            }
+
+            .secondary-photos {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 0.75rem;
             }
         }
 
@@ -107,14 +124,11 @@
             .about-content {
                 width: calc(100% - 2rem);
             }
-
-            .bio-gallery {
-                gap: 0.5rem;
-            }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .bio-gallery img {
+            .main-photo img,
+            .secondary-photos img {
                 transition: none;
             }
         }
@@ -123,53 +137,54 @@
 
 <body>
 
-    <!-- Navigation -->
-    <header>
-        <nav class="navbar">
-            <a href="index.html" class="logo">María Castro</a>
+    <!-- Navigation: uses the existing main.css classes -->
+    <nav class="main-nav">
+        <a href="index.html" class="logo">María Castro</a>
 
-            <button class="menu-toggle"
-                    aria-label="Open navigation menu"
-                    aria-expanded="false"
-                    aria-controls="nav-menu">
+        <button class="menu-toggle"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="live.html">Live</a></li>
+            <li><a href="about.html" aria-current="page">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <span class="mobile-menu-logo">María Castro</span>
+
+            <button class="menu-close" aria-label="Close menu">
                 <span></span>
                 <span></span>
             </button>
+        </div>
 
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="live.html">Live</a></li>
-                <li><a href="about.html" aria-current="page">About</a></li>
-            </ul>
-        </nav>
-    </header>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="live.html">Live</a></li>
+            <li><a href="about.html" aria-current="page">About</a></li>
+        </ul>
+    </div>
 
-    <!-- About -->
+    <!-- Main content -->
     <main class="about-content">
 
         <h1>About</h1>
 
-        <!-- Photo gallery -->
-        <div class="bio-gallery">
-
-            <img class="gallery-main"
-                 src="Images/1447-5.png"
-                 alt="María Castro"
-                 loading="lazy">
-
-            <img src="Images/_SZG1083.jpg"
-                 alt="María Castro — photograph"
-                 loading="lazy">
-
-            <img src="Images/_SZG1037.jpg"
-                 alt="María Castro — photograph"
-                 loading="lazy">
-
-            <img src="Images/IMG_5073.JPG"
-                 alt="María Castro — photograph"
-                 loading="lazy">
-
+        <!-- Main photograph -->
+        <div class="main-photo">
+            <img src="Images/1447-5.png"
+                 alt="María Castro">
         </div>
 
         <!-- Biography -->
@@ -216,18 +231,37 @@
 
         </section>
 
+        <!-- Additional photographs -->
+        <div class="secondary-photos">
+
+            <img src="Images/_SZG1083.jpg"
+                 alt="María Castro — photograph"
+                 loading="lazy">
+
+            <img src="Images/_SZG1037.jpg"
+                 alt="María Castro — photograph"
+                 loading="lazy">
+
+            <img src="Images/IMG_5073.JPG"
+                 alt="María Castro — photograph"
+                 loading="lazy">
+
+        </div>
+
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 María Castro</p>
-        <p>
+        <div class="footer-left">
+            © 2026 María Castro
+        </div>
+
+        <div class="footer-right">
             <a href="mailto:marcastrosound@gmail.com">Email</a>
-            <span aria-hidden="true"> · </span>
             <a href="https://marcastrosound.com/"
                target="_blank"
                rel="noopener noreferrer">Website</a>
-        </p>
+        </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
