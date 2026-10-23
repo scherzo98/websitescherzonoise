@@ -5,131 +5,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About — María Castro</title>
-
     <link rel="stylesheet" href="assets/css/main.css">
 
     <style>
-        /* About page */
+        /* ============================================
+           ABOUT PAGE
+           ============================================ */
+
         .about-content {
-            width: calc(100% - 8rem);
-            max-width: 1200px;
-            margin: 0 auto;
+            width: calc(100% - 10rem);
+            max-width: 1400px;
             padding: 8rem 0 4rem;
+            margin: 0 auto;
         }
 
-            .about-content h1 {
+        .about-header {
+            margin-bottom: 2rem;
+        }
+
+            .about-header h1 {
                 font-size: clamp(3rem, 6vw, 5rem);
-                margin-bottom: 2.5rem;
+                font-weight: 400;
+                line-height: 1.05;
+                letter-spacing: -0.03em;
+                margin-bottom: 1rem;
             }
 
-        /* Main photograph */
-        .main-photo {
-            width: 100%;
-            margin-bottom: 3rem;
+        .about-image {
+            margin: 2rem 0 4rem;
         }
 
-            .main-photo img {
+            .about-image img {
                 display: block;
                 width: 100%;
-                height: auto;
-                max-height: 80vh;
-                object-fit: contain;
-                object-position: left center;
+                max-height: 85vh;
+                object-fit: cover;
                 filter: grayscale(100%);
-                transition: filter 0.5s ease;
             }
 
-            .main-photo:hover img {
-                filter: grayscale(0%);
-            }
-
-        /* Biography */
         .about-text {
-            max-width: 1000px;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             line-height: 1.9;
-            text-align: justify;
-            text-justify: inter-word;
-            margin-bottom: 4rem;
+            color: var(--text-light);
+            max-width: 1050px;
         }
 
             .about-text p {
-                margin-bottom: 1.75rem;
+                margin-bottom: 2rem;
             }
 
                 .about-text p:last-child {
                     margin-bottom: 0;
                 }
 
-        /* Additional photographs */
-        .secondary-photos {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1.25rem;
-            align-items: start;
-            margin-top: 3rem;
-        }
-
-            .secondary-photos img {
-                display: block;
-                width: 100%;
-                height: auto;
-                object-fit: contain;
-                filter: grayscale(100%);
-                transition: filter 0.5s ease;
+            .about-text strong {
+                color: var(--text);
+                font-weight: 500;
             }
 
-                .secondary-photos img:hover {
-                    filter: grayscale(0%);
-                }
+        /* ============================================
+           RESPONSIVE — TABLET
+           ============================================ */
 
-        /* Responsive layout */
         @media (max-width: 1024px) {
             .about-content {
-                width: calc(100% - 5rem);
+                width: calc(100% - 6rem);
+            }
+
+            .about-text {
+                font-size: 1.1rem;
             }
         }
+
+        /* ============================================
+           RESPONSIVE — MOBILE
+           ============================================ */
 
         @media (max-width: 768px) {
             .about-content {
                 width: calc(100% - 3rem);
-                padding: 6rem 0 3rem;
+                padding: 7rem 0 3rem;
             }
 
-                .about-content h1 {
-                    font-size: clamp(2.5rem, 10vw, 4rem);
+            .about-header {
+                margin-bottom: 1.5rem;
+            }
+
+                .about-header h1 {
+                    font-size: clamp(2.8rem, 10vw, 3.8rem);
                 }
 
-            .main-photo {
-                margin-bottom: 2rem;
+            .about-image {
+                margin: 1.5rem 0 2.5rem;
             }
 
-                .main-photo img {
+                .about-image img {
                     max-height: none;
+                    object-fit: contain;
                 }
 
             .about-text {
-                font-size: 1rem;
+                font-size: 1.05rem;
                 line-height: 1.8;
-                margin-bottom: 3rem;
             }
 
-            .secondary-photos {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 0.75rem;
-            }
+                .about-text p {
+                    margin-bottom: 1.6rem;
+                }
         }
 
         @media (max-width: 380px) {
             .about-content {
-                width: calc(100% - 2rem);
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .main-photo img,
-            .secondary-photos img {
-                transition: none;
+                width: calc(100% - 2.4rem);
             }
         }
     </style>
@@ -137,58 +124,95 @@
 
 <body>
 
-    <!-- Navigation: uses the existing main.css classes -->
+    <!-- NAVIGATION -->
     <nav class="main-nav">
         <a href="index.html" class="logo">María Castro</a>
 
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+
+            <li class="dropdown">
+                <a href="#">Projects</a>
+                <ul class="dropdown-menu">
+                    <li><a href="projects/liminal-gesture/">Liminal Gesture</a></li>
+                    <li><a href="projects/sinfonia-biotica/">Sinfonía Biótica</a></li>
+                    <li><a href="projects/pink-noise/">Pink Noise</a></li>
+                    <li><a href="projects/mareo-migrante/">Mareo Migrante MM</a></li>
+                    <li><a href="projects/algorithm-fest/">{PinkNoise.ar} Algorithm Music Fest</a></li>
+                </ul>
+            </li>
+
+            <li><a href="lutherie.html">Experimental / Post-digital Lutherie</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="live.html">Live</a></li>
+            <li>
+                <a href="https://marcastronoise.weebly.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">Game Audio</a>
+            </li>
+        </ul>
+
         <button class="menu-toggle"
-                aria-label="Open menu"
-                aria-expanded="false"
-                aria-controls="mobile-menu">
+                id="menuOpen"
+                aria-label="Abrir menú"
+                aria-expanded="false">
+            <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </button>
-
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="live.html">Live</a></li>
-            <li><a href="about.html" aria-current="page">About</a></li>
-        </ul>
     </nav>
 
-    <!-- Mobile menu -->
-    <div class="mobile-menu" id="mobile-menu">
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-header">
             <span class="mobile-menu-logo">María Castro</span>
 
-            <button class="menu-close" aria-label="Close menu">
+            <button class="menu-close"
+                    id="menuClose"
+                    aria-label="Cerrar menú">
                 <span></span>
                 <span></span>
             </button>
         </div>
 
         <ul class="mobile-nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+
+            <li class="mobile-dropdown">
+                <span class="mobile-dropdown-label">Projects</span>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="projects/liminal-gesture/">Liminal Gesture</a></li>
+                    <li><a href="projects/sinfonia-biotica/">Sinfonía Biótica</a></li>
+                    <li><a href="projects/pink-noise/">Pink Noise</a></li>
+                    <li><a href="projects/mareo-migrante/">Mareo Migrante MM</a></li>
+                    <li><a href="projects/algorithm-fest/">{PinkNoise.ar} Algorithm Music Fest</a></li>
+                </ul>
+            </li>
+
+            <li><a href="lutherie.html">Experimental / Post-digital Lutherie</a></li>
+            <li><a href="music.html">Music</a></li>
             <li><a href="live.html">Live</a></li>
-            <li><a href="about.html" aria-current="page">About</a></li>
+            <li>
+                <a href="https://marcastronoise.weebly.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">Game Audio</a>
+            </li>
         </ul>
     </div>
 
-    <!-- Main content -->
+    <!-- ABOUT CONTENT -->
     <main class="about-content">
 
-        <h1>About</h1>
+        <header class="about-header">
+            <h1>About</h1>
+        </header>
 
-        <!-- Main photograph -->
-        <div class="main-photo">
-            <img src="Images/1447-5.png"
+        <div class="about-image">
+            <img src="https://raw.githubusercontent.com/scherzo98/websitescherzonoise/refs/heads/main/Images/0181-9.jpg"
                  alt="María Castro">
         </div>
 
-        <!-- Biography -->
-        <section class="about-text" aria-label="Biography">
+        <div class="about-text">
 
             <p>
                 María Castro (Bogotá, 1998) is a Colombian electroacoustic
@@ -218,49 +242,31 @@
                 uses digital tools and interactive paradigms to explore new
                 forms of sonic expression in both physical and virtual
                 environments, always grounded in the convergence of multiple
-                disciplines where music, sound and interactivity act as
-                bridges between the physical and digital worlds.
+                disciplines where music, sound and interactivity act as bridges
+                between the physical and digital worlds.
             </p>
 
             <p>
                 She works as Senior Audio Designer at No Brakes Games, leading
-                the sound department on international video game projects. And
-                in 2026, she was a jury member for the BAFTA Games Awards Game
-                Audio category in London, UK.
+                the sound department on international video game projects.
+                And in 2026, she was a jury member for the BAFTA Games Awards
+                Game Audio category in London, UK.
             </p>
 
-        </section>
-
-        <!-- Additional photographs -->
-        <div class="secondary-photos">
-
-            <img src="Images/_SZG1083.jpg"
-                 alt="María Castro — photograph"
-                 loading="lazy">
-
-            <img src="Images/_SZG1037.jpg"
-                 alt="María Castro — photograph"
-                 loading="lazy">
-
-            <img src="Images/IMG_5073.JPG"
-                 alt="María Castro — photograph"
-                 loading="lazy">
-
         </div>
-
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
-        <div class="footer-left">
-            © 2026 María Castro
-        </div>
+        <div class="footer-left">© 2026 María Castro</div>
 
         <div class="footer-right">
-            <a href="mailto:marcastrosound@gmail.com">Email</a>
-            <a href="https://marcastrosound.com/"
+            <a href="mailto:contact@mariacastro.audio">Email</a>
+            <a href="https://sinfoniabiotica.xyz"
                target="_blank"
-               rel="noopener noreferrer">Website</a>
+               rel="noopener noreferrer">
+                Sinfonía Biótica
+            </a>
         </div>
     </footer>
 
