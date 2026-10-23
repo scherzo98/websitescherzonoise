@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live — María Castro</title>
     <link rel="stylesheet" href="assets/css/main.css">
+
     <style>
         .page-header {
             padding: 8rem 4rem 2rem;
@@ -91,21 +93,39 @@
                 font-weight: 500;
             }
 
+        .trio-website-link {
+            display: inline-block;
+            color: var(--text);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: opacity 0.2s ease;
+        }
+
+            .trio-website-link:hover {
+                opacity: 0.7;
+            }
+
         @media (max-width: 768px) {
-            .page-header,
-            .content {
+            .page-header {
                 padding: 6rem 1.5rem 2rem;
+            }
+
+            .content {
+                padding: 4rem 1.5rem 2rem;
             }
         }
     </style>
 </head>
+
 <body>
+
     <!-- NAV: logo + menú desktop + botón hamburguesa -->
     <nav class="main-nav">
         <a href="index.html" class="logo">María Castro</a>
 
         <ul class="nav-links">
             <li><a href="about.html">About</a></li>
+
             <li class="dropdown">
                 <a href="#">Projects</a>
                 <ul class="dropdown-menu">
@@ -116,10 +136,11 @@
                     <li><a href="projects/algorithm-fest/">{PinkNoise.ar} Algorithm Music Fest</a></li>
                 </ul>
             </li>
+
             <li><a href="lutherie.html">Experimental / Post-digital Lutherie</a></li>
             <li><a href="music.html">Music</a></li>
             <li><a href="live.html">Live</a></li>
-            <li><a href="https://marcastronoise.weebly.com/" target="_blank">Game Audio</a></li>
+            <li><a href="https://marcastronoise.weebly.com/" target="_blank" rel="noopener noreferrer">Game Audio</a></li>
         </ul>
 
         <button class="menu-toggle" id="menuOpen" aria-label="Abrir menú" aria-expanded="false">
@@ -133,13 +154,16 @@
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-header">
             <span class="mobile-menu-logo">María Castro</span>
+
             <button class="menu-close" id="menuClose" aria-label="Cerrar menú">
                 <span></span>
                 <span></span>
             </button>
         </div>
+
         <ul class="mobile-nav-links">
             <li><a href="about.html">About</a></li>
+
             <li class="mobile-dropdown">
                 <span class="mobile-dropdown-label">Projects</span>
                 <ul class="mobile-dropdown-menu">
@@ -150,13 +174,15 @@
                     <li><a href="projects/algorithm-fest/">{PinkNoise.ar} Algorithm Music Fest</a></li>
                 </ul>
             </li>
+
             <li><a href="lutherie.html">Experimental / Post-digital Lutherie</a></li>
             <li><a href="music.html">Music</a></li>
             <li><a href="live.html">Live</a></li>
-            <li><a href="https://marcastronoise.weebly.com/" target="_blank">Game Audio</a></li>
+            <li><a href="https://marcastronoise.weebly.com/" target="_blank" rel="noopener noreferrer">Game Audio</a></li>
         </ul>
     </div>
 
+    <!-- PAGE HEADER -->
     <header class="page-header">
         <h1>Live</h1>
         <p>Documented performances, live sets, and concert recordings.</p>
@@ -164,35 +190,60 @@
 
     <div class="content">
 
-        <!-- Performance 1: FUGA -->
+        <!-- Performance 1: yang/castro/manzano -->
         <div class="performance-section">
-            <h2 class="performance-title">FUGA</h2>
-            <span class="performance-subtitle">Contemporary Dance & Electroacoustic Performance</span>
+            <h2 class="performance-title">
+                yang/castro/manzano — Live at MOBA STUDIOS
+            </h2>
+
+            <span class="performance-subtitle">
+                Electroacoustic Improvisation Trio · August 2026
+            </span>
 
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/Xo4bFwdbiRg?si=S-tvhj560XBB2T7b"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                <iframe src="https://www.youtube-nocookie.com/embed/KmtXClmd5VI"
+                        title="yang/castro/manzano — Live at MOBA STUDIOS"
+                        loading="lazy"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin"
                         allowfullscreen>
                 </iframe>
             </div>
 
             <div class="performance-description">
-                <p>FUGA is a contemporary dance and electroacoustic music performance that explores utopian ideas within electronic sound and choreography. The piece was developed as a dialogue between body movement and live electronic improvisation, using the Moog Matriarch, SuperCollider, and live sampling to build a responsive sonic environment structured around the dancer's actions.</p>
+                <p>
+                    Studio live free improv session recorded at Moba Studios,
+                    featuring Jorge Manzano (electric guitar and objects),
+                    María Castro (modular synthesis and SuperCollider), and
+                    Yang Haoyuan (no-input mixer). The performance explores
+                    the intersection of contemporary jazz, free improvisation
+                    and electroacoustic music through the interaction of
+                    acoustic instruments, electronic systems and feedback.
+                </p>
 
-                <p>The work premiered at the IX edition of the Migrats Dansa cycle at the Centre del Carme Cultura Contemporània, organized by the Consorci de Museus de la Comunitat Valenciana and Espai Inestable. Within this context, FUGA was presented alongside emerging contemporary dance works, contributing to a program focused on young choreographers and interdisciplinary experimentation.</p>
+                <p>
+                    <a href="https://yangcastromanzano-trio-website--freeimprotrio.replit.app/"
+                       class="trio-website-link"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Visit the trio's website ↗
+                    </a>
+                </p>
             </div>
         </div>
 
-        <!-- Performance 2: Sonido Futuro / {Embrace ERRØR}.code(party) -->
+        <!-- Performance 2: FUGA -->
         <div class="performance-section">
-            <h2 class="performance-title">{Embrace ERRØR}.code(party) / Sonido Futuro</h2>
-            <span class="performance-subtitle">Live Coding Performance — Círculo de Bellas Artes</span>
+            <h2 class="performance-title">FUGA</h2>
+
+            <span class="performance-subtitle">
+                Contemporary Dance &amp; Electroacoustic Performance
+            </span>
 
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/4PNkbHEItX4?si=QaNcZ4Cd9LeN9pBL"
-                        title="YouTube video player"
+                <iframe src="https://www.youtube.com/embed/Xo4bFwdbiRg?si=S-tvhj560XBB2T7b"
+                        title="FUGA — Contemporary Dance and Electroacoustic Performance"
+                        loading="lazy"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin"
                         allowfullscreen>
@@ -200,26 +251,105 @@
             </div>
 
             <div class="performance-description">
-                <p>Experimental electronic / noise live performance presented as part of the closing concert lineup for Sonido Futuro at the Círculo de Bellas Artes, alongside cute::wire.</p>
+                <p>
+                    FUGA is a contemporary dance and electroacoustic music
+                    performance that explores utopian ideas within electronic
+                    sound and choreography. The piece was developed as a
+                    dialogue between body movement and live electronic
+                    improvisation, using the Moog Matriarch, SuperCollider,
+                    and live sampling to build a responsive sonic environment
+                    structured around the dancer's actions.
+                </p>
 
-                <p>The performance was structured as a free improvisation guided by a broader macro-compositional form, combining live coding, modular synthesis, granular processing, noise textures, and processed voice. The set was developed through a hybrid performance system built around SuperCollider, Hydra live visuals, and the Moog Matriarch.</p>
+                <p>
+                    The work premiered at the IX edition of the Migrats Dansa
+                    cycle at the Centre del Carme Cultura Contemporània,
+                    organized by the Consorci de Museus de la Comunitat
+                    Valenciana and Espai Inestable. Within this context,
+                    FUGA was presented alongside emerging contemporary dance
+                    works, contributing to a program focused on young
+                    choreographers and interdisciplinary experimentation.
+                </p>
+            </div>
+        </div>
 
-                <p>A central aspect of the performance involved a bidirectional MIDI feedback system between SuperCollider and the synthesizer. The Moog Matriarch continuously sent MIDI information to SuperCollider while simultaneously receiving MIDI data generated and processed in real time by the software environment, creating an evolving feedback relationship between live performance, algorithmic processes, and analog synthesis. This system allowed the sonic structure to emerge dynamically through interaction between performer, code, and instrument.</p>
+        <!-- Performance 3: Sonido Futuro -->
+        <div class="performance-section">
+            <h2 class="performance-title">
+                {Embrace ERRØR}.code(party) / Sonido Futuro
+            </h2>
 
-                <p>The performance also incorporated granular synthesis techniques, live audiovisual coding with Hydra, and processed human voice manipulated through external effects pedals. Across the set, layers of noise, unstable textures, harmonic fragments, and gestural improvisation were combined into an evolving electroacoustic environment balancing algorithmic behavior with real-time performative control.</p>
+            <span class="performance-subtitle">
+                Live Coding Performance — Círculo de Bellas Artes
+            </span>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/4PNkbHEItX4?si=QaNcZ4Cd9LeN9pBL"
+                        title="Sonido Futuro — Live Coding Performance"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="performance-description">
+                <p>
+                    Experimental electronic / noise live performance presented
+                    as part of the closing concert lineup for Sonido Futuro
+                    at the Círculo de Bellas Artes, alongside cute::wire.
+                </p>
+
+                <p>
+                    The performance was structured as a free improvisation
+                    guided by a broader macro-compositional form, combining
+                    live coding, modular synthesis, granular processing,
+                    noise textures, and processed voice. The set was developed
+                    through a hybrid performance system built around
+                    SuperCollider, Hydra live visuals, and the Moog Matriarch.
+                </p>
+
+                <p>
+                    A central aspect of the performance involved a bidirectional
+                    MIDI feedback system between SuperCollider and the
+                    synthesizer. The Moog Matriarch continuously sent MIDI
+                    information to SuperCollider while simultaneously
+                    receiving MIDI data generated and processed in real time
+                    by the software environment, creating an evolving feedback
+                    relationship between live performance, algorithmic
+                    processes, and analog synthesis. This system allowed the
+                    sonic structure to emerge dynamically through interaction
+                    between performer, code, and instrument.
+                </p>
+
+                <p>
+                    The performance also incorporated granular synthesis
+                    techniques, live audiovisual coding with Hydra, and
+                    processed human voice manipulated through external effects
+                    pedals. Across the set, layers of noise, unstable textures,
+                    harmonic fragments, and gestural improvisation were
+                    combined into an evolving electroacoustic environment
+                    balancing algorithmic behavior with real-time performative
+                    control.
+                </p>
             </div>
         </div>
 
     </div>
 
+    <!-- FOOTER -->
     <footer>
         <div class="footer-left">© 2026 María Castro</div>
+
         <div class="footer-right">
             <a href="mailto:contact@mariacastro.audio">Email</a>
-            <a href="https://sinfoniabiotica.xyz" target="_blank">Sinfonía Biótica</a>
+            <a href="https://sinfoniabiotica.xyz" target="_blank" rel="noopener noreferrer">
+                Sinfonía Biótica
+            </a>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
+
 </body>
 </html>
